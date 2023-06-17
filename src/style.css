@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap');
+
+:root{
+  --background: #007176;
+  --font-colour: #B6FDFF;
+  --highlight-1: #74C9CC;
+  --highlight-2: #8EFBFF;
+  --sub-background: #009094;
+}
+
+body{
+  background: #000;
+  font-family: 'Rubik', sans-serif;
+}
+
+.background-tri-blue{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: 
+    linear-gradient(to bottom right,
+      transparent 48%, #0003 50%, var(--sub-background) 50%);
+}
+
+.background-tri-black{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: 
+    linear-gradient(to bottom left,
+      transparent 48%, #0003 50%, #353535 50%);
+}
+
+.card{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #fff5;
+  backdrop-filter: blur(30px);
+  padding: 20px;
+  border-radius: 20px;
+  width: 500px;
+  height: 500px;
+  box-shadow: #0005 0 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-text{
+  transform: rotate(-45deg);
+  color: var(--highlight-2);
+}
+
+.card-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+}
+
+.about{
+  margin: 10px;
+  margin-top: 150px;
+  text-align: center;
+  color: var(--highlight-2);
+}
+
+.socials{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social{
+  margin: 10px 30px;
+  font-size: 40px;
+  color: var(--highlight-2);
+  transition: 0.1s;
+  cursor: pointer;
+  user-select: none;
+}
+
+.social:hover{
+  color: var(--highlight-1);
+  text-shadow: #0002 0 0 10px;
+}
+
+#icon{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: var(--highlight-2) 8px solid;
+  border-radius: 15px;
+  box-shadow: #0005 0 0 20px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .card-content{
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .card{
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .social{
+    margin: 10px 20px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .social{
+    margin: 10px;
+  }
+}
