@@ -122,6 +122,12 @@ body{
   .social{
     margin: 10px 20px;
   }
+  .card{
+    height: 300px;
+  }
+  .about{
+    margin-top: 100px;
+  }
 }
 
 @media only screen and (max-width: 350px) {
